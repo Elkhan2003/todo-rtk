@@ -1,11 +1,5 @@
-import TodoAdd from './components/TodoAdd';
-
 const App = () => {
-	return (
-		<>
-			<TodoAdd />
-		</>
-	);
+	return <></>;
 };
 
 export default App;
