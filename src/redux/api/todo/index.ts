@@ -2,12 +2,12 @@ import { api as index } from '..';
 
 const api = index.injectEndpoints({
 	endpoints: (build) => ({
-		getRating: build.query<GetRatingResponse, GetRatingRequest>({
+		getRating: build.query<TODO.GetTodoResponse, TODO.GetTodoRequest>({
 			query: () => ({
-				url: '/rating/get',
+				url: '/get',
 				method: 'GET'
 			}),
-			providesTags: ['rating']
+			providesTags: ['todo']
 		})
 	})
 });

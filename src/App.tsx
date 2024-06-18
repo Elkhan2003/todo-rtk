@@ -1,10 +1,9 @@
-import { RouterProvider } from 'react-router-dom';
-import { router } from './routes/router';
+import TodoList from './components/TodoList';
 
 const App = () => {
 	return (
 		<>
-			<RouterProvider router={router} />
+			<TodoList />
 		</>
 	);
 };

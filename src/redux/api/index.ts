@@ -5,15 +5,10 @@ import {
 } from '@reduxjs/toolkit/query/react';
 
 const baseQuery = fetchBaseQuery({
-	baseUrl: `${import.meta.env.VITE_PUBLIC_API_URL}/api/v1`,
+	baseUrl: `${import.meta.env.VITE_PUBLIC_API_URL}`,
 	prepareHeaders: (headers) => {
-		const token = JSON.parse(String(localStorage.getItem('accessToken')));
-		if (token) {
-			headers.set('Authorization', `Bearer ${token}`);
-		}
 		return headers;
-	},
-	credentials: 'include'
+	}
 });
 
 const baseQueryExtended: BaseQueryFn = async (args, api, extraOptions) => {
@@ -26,6 +21,6 @@ export const api = createApi({
 	baseQuery: baseQueryExtended,
 	refetchOnReconnect: true,
 	refetchOnFocus: false,
-	tagTypes: ['auth', 'rating'],
+	tagTypes: ['auth', 'todo'],
 	endpoints: () => ({})
 });
