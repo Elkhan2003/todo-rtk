@@ -1,9 +1,11 @@
-import TodoList from './components/TodoList';
+import TodoAdd from './components/TodoAdd';
+import TodoRead from './components/TodoRead';
 
 const App = () => {
 	return (
 		<>
-			<TodoList />
+			<TodoAdd />
+			<TodoRead />
 		</>
 	);
 };
